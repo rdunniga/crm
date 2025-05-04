@@ -314,12 +314,14 @@ function App() {
     },
   ];
 
+  console.log('refresh');
   const handleReset = () => {
     dispatch({
       type: "SET_RESPONSE",
       key: iceSteps[state.step].title,
       payload: "",
     });
+    setAiSuggestion(null);
   };
 
   const handleNextStep = () => {
